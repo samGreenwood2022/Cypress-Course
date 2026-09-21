@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 describe('Navigate to Dyson Manufacturer Homepage', () => {
   it('should navigate to the homepage successfully', () => {
     // go to the baseUrl homepage
