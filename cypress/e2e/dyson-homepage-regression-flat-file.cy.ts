@@ -1,15 +1,12 @@
 /// <reference types="cypress" />
-
 // this is a Cypress test suite for navigating to the Dyson Manufacturer Homepage and verifying various elements on the page
-// this is deliberatly written as an optimised flat file without using page objects
+// this is deliberately written as an optimised flat file without using page objects
 
 describe('Navigate to Dyson Manufacturer Homepage', () => {
   beforeEach('should navigate to the homepage successfully', () => {
-
     const searchField = '[data-cy="searchFieldSearch"]';
     const tabCategory = '[data-cy="tabCategory"]';
     const dysonTile = '[title="View Dyson"]';
-
     // go to the baseUrl homepage
     cy.visit('/');
     // check we landed on the right page
@@ -34,7 +31,6 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
     cy.url()
       .should('include', '/manufacturer/dyson/nakAxHWxDZprdqkBaCdn4U/overview', { timeout: 10000 });
   });
-
   // test 01 - assert the h1 header is correct
   it('the h1 header is correct', () => {
     const h1Header = 'h1';
@@ -43,7 +39,6 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
       .should('be.visible')
       .and('have.text', 'Dyson');
   });
-
   // test 02 - assert the h1 header paragraph is correct
   it('the h1 header paragraph is correct', () => {
     const h1HeaderParagraph = '.brand-title-container + p';
@@ -52,7 +47,6 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
       .should('be.visible')
       .and('have.text', 'Technology for business');
   });
-
   // test 03 - assert the telephone number is correct
   it('the telephone number is correct', () => {
     const telephoneNumber = 'a[action="telephone"]';
@@ -62,7 +56,6 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
       .and('include.text', '08003457788')
       .and('have.attr', 'href', 'tel:08003457788');
   });
-
   // test 04 - check the dyson website link
   it("check the dyson website link", () => {
     const companyWebsiteLink = cy.get('a[action="company-website"]');
@@ -81,13 +74,12 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
       "Visit https://www.dyson.co.uk/commercial/overview",
     );
   });
-
-  // test 05 - check the contact manfacurer button
-  it("check the contact manfacurer button", () => {
+  // test 05 - check the contact manufacturer button
+  it("check the contact manufacturer button", () => {
     const contactManufacturerButton = cy.get("button.contact-button");
     // check the contact manufacturer button is visible and has the correct text
     contactManufacturerButton.should("have.text", " Contact manufacturer ");
     contactManufacturerButton.should("be.visible");
   });
-
 });
+ 
