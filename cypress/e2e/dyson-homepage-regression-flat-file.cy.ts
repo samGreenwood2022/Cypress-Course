@@ -31,6 +31,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
     cy.url()
       .should('include', '/manufacturer/dyson/nakAxHWxDZprdqkBaCdn4U/overview', { timeout: 10000 });
   });
+  
   // test 01 - assert the h1 header is correct
   it('the h1 header is correct', () => {
     const h1Header = 'h1';

@@ -16,6 +16,12 @@ export class BasePage {
   // store reusable actions and assertions here, using the locators above
   // ==========================================================================
 
+  // navigate to nbs source homepage
+  navigateToNBSHomepage() {
+    cy.visit('/');
+    cy.url().should('eq', 'https://source.thenbs.com/en/gb');
+  }
+
   // type a search term into the visible search box and hit enter
   searchFor(term: string) {
     cy.get(this.searchField)
