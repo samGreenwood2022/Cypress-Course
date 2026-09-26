@@ -20,7 +20,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
   // test 01 - assert the h1 header is correct
   it('the h1 header is correct', () => {
     const manufacturerHomePage = new ManufacturerHomePage();
-    manufacturerHomePage.getH1Header('dyson');
+    manufacturerHomePage.getH1Header('Dyson');
   });
 
 
