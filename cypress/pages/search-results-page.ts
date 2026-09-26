@@ -24,7 +24,7 @@ export class SearchResultsPage extends BasePage {
   }
 
   // click the Dyson result tile
-  clickDysonTile() {
+  clickTile() {
     cy.get(this.dysonTile).click({ timeout: 10000 });
     cy.url().should(
       "include",

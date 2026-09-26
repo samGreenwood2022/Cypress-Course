@@ -14,7 +14,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
     basePage.navigateToNBSHomepage();
     basePage.searchFor('dyson');
     searchResultsPage.clickManufacturerTab();
-    searchResultsPage.clickDysonTile();
+    searchResultsPage.clickTile();
   });
   
   // test 01 - assert the h1 header is correct
