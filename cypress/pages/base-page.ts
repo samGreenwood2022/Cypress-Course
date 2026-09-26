@@ -13,13 +13,13 @@ export class BasePage {
 
   // ==========================================================================
   // METHODS
-  // store reusable actions and assertions here, using the locators above
+  // store reusable actions and element getters here, using the locators above
+  // assertions belong in the spec files
   // ==========================================================================
 
   // navigate to nbs source homepage
   navigateToNBSHomepage() {
     cy.visit('/');
-    cy.url().should('eq', 'https://source.thenbs.com/en/gb');
   }
 
   // type a search term into the visible search box and hit enter

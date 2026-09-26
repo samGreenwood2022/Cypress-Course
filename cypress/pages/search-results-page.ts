@@ -13,7 +13,8 @@ export class SearchResultsPage extends BasePage {
 
   // ==========================================================================
   // METHODS
-  // store reusable actions and assertions here, using the locators above
+  // store reusable actions and element getters here, using the locators above
+  // assertions belong in the spec files
   // ==========================================================================
 
   // click the manufacturer tab
@@ -26,10 +27,5 @@ export class SearchResultsPage extends BasePage {
   // click the Dyson result tile
   clickTile() {
     cy.get(this.dysonTile).click({ timeout: 10000 });
-    cy.url().should(
-      "include",
-      "/manufacturer/dyson/nakAxHWxDZprdqkBaCdn4U/overview",
-      { timeout: 10000 },
-    );
   }
 }

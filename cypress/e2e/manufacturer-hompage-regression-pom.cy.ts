@@ -2,20 +2,24 @@
 // this is a Cypress test suite for navigating to the Dyson Manufacturer Homepage and verifying various elements on the page
 // this is written using the page object model: page objects find elements, the assertions live here in the tests
 
-import { BasePage } from '../pages/base-page';
 import { SearchResultsPage } from '../pages/search-results-page';
 import { ManufacturerHomePage } from '../pages/manufacturer-home-page';
 
 describe('Navigate to Dyson Manufacturer Homepage', () => {
-  const basePage = new BasePage();
   const searchResultsPage = new SearchResultsPage();
   const manufacturerHomePage = new ManufacturerHomePage();
 
   beforeEach('should navigate to the homepage successfully', () => {
-    basePage.navigateToNBSHomepage();
-    basePage.searchFor('dyson');
+    searchResultsPage.navigateToNBSHomepage();
+    cy.url().should('eq', 'https://source.thenbs.com/en/gb');
+
+    searchResultsPage.searchFor('dyson');
     searchResultsPage.clickManufacturerTab();
     searchResultsPage.clickTile();
+    cy.url({ timeout: 10000 }).should(
+      'include',
+      '/manufacturer/dyson/nakAxHWxDZprdqkBaCdn4U/overview',
+    );
   });
 
   // test 01 - assert the h1 header is correct
