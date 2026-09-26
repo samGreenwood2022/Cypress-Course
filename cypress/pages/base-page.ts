@@ -3,7 +3,6 @@
 // other page objects should extend this class, e.g. `class HomePage extends BasePage`
 
 export class BasePage {
-
   // ==========================================================================
   // LOCATORS
   // store selectors here as readonly properties so they are defined once
@@ -24,8 +23,6 @@ export class BasePage {
 
   // type a search term into the visible search box and hit enter
   searchFor(term: string) {
-    cy.get(this.searchField)
-      .filter(':visible')
-      .type(`${term}{enter}`, { timeout: 10000 });
+    cy.get(this.searchField).filter(':visible').type(`${term}{enter}`);
   }
 }

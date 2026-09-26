@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { BasePage } from "./base-page";
+import { BasePage } from './base-page';
 
 export class SearchResultsPage extends BasePage {
   // ==========================================================================
@@ -19,13 +19,11 @@ export class SearchResultsPage extends BasePage {
 
   // click the manufacturer tab
   clickManufacturerTab() {
-    cy.get(this.tabCategory)
-      .contains("Manufacturers")
-      .click({ timeout: 10000 });
+    cy.get(this.tabCategory).contains('Manufacturers').click();
   }
 
   // click the Dyson result tile
   clickTile() {
-    cy.get(this.dysonTile).click({ timeout: 10000 });
+    cy.get(this.dysonTile).click();
   }
 }
