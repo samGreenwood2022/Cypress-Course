@@ -15,52 +15,32 @@ export class ManufacturerHomePage extends BasePage {
 
   // ==========================================================================
   // METHODS
-  // store reusable actions and assertions here, using the locators above
+  // store reusable element getters and actions here, using the locators above
+  // assertions belong in the spec files, chained onto the elements returned here
   // ==========================================================================
 
   // get the h1 header element
-  getH1Header(h1: string) {
-    cy.get(this.h1Header)
-      .should('be.visible')
-      .and('have.text', h1);
+  getH1Header() {
+    return cy.get(this.h1Header);
   }
 
   // get the h1 header paragraph element
-  getH1HeaderParagraph(h1paragraph: string) {
-    cy.get(this.h1HeaderParagraph)
-      .should('be.visible')
-      .and('have.text', h1paragraph);
+  getH1HeaderParagraph() {
+    return cy.get(this.h1HeaderParagraph);
   }
 
   // get the telephone number element
-  getTelephoneNumber(telephone: string) {
-    cy.get(this.telephoneNumber)
-      .should('be.visible')
-      .and('include.text', telephone)
-      .and('have.attr', 'href', `tel:${telephone}`);
+  getTelephoneNumber() {
+    return cy.get(this.telephoneNumber);
   }
 
   // get the company website link element
   getCompanyWebsiteLink() {
-    cy.get(this.companyWebsiteLink).should("have.text", " Website ");
-    cy.get(this.companyWebsiteLink).should(
-      "have.attr",
-      "href",
-      "https://www.dyson.co.uk/commercial/overview",
-    );
-    cy.get(this.companyWebsiteLink).should("have.attr", "target", "_blank");
-    cy.get(this.companyWebsiteLink).should("be.visible");
-    cy.get(this.companyWebsiteLink).should(
-      "have.attr",
-      "title",
-      "Visit https://www.dyson.co.uk/commercial/overview",
-    );
+    return cy.get(this.companyWebsiteLink);
   }
 
   // get the contact manufacturer button element
   getContactManufacturerButton() {
-    cy.get(this.contactManufacturerButton)
-      .should("have.text", " Contact manufacturer ")
-      .and("be.visible");
+    return cy.get(this.contactManufacturerButton);
   }
 }
