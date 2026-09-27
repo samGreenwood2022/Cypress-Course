@@ -5,13 +5,16 @@
   "license": "ISC",
   "author": "S Greenwood",
   "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "cy:open": "cypress open --browser edge",
-    "cy:run": "cypress run --browser edge"
+    "cy:run": "cypress run --browser edge",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "cypress": "^16.1.0",
+    "prettier": "^3.9.9",
     "typescript": "^7.0.2"
   }
 }
