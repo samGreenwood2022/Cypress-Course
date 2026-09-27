@@ -6,7 +6,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
   beforeEach('should navigate to the homepage successfully', () => {
     const searchField = '[data-cy="searchFieldSearch"]';
     const tabCategory = '[data-cy="tabCategory"]';
-    const dysonTile = '[title="View Dyson"]';
+    const tile = '[title="View Dyson"]';
     // go to the baseUrl homepage
     cy.visit('/');
     // check we landed on the right page
@@ -16,7 +16,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
     // switch to the Manufacturers tab
     cy.get(tabCategory).contains('Manufacturers').click();
     // click the Dyson result tile
-    cy.get(dysonTile).click();
+    cy.get(tile).click();
     // confirm we're on the Dyson page
     cy.location('pathname').should(
       'include',
@@ -47,7 +47,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
       .and('have.attr', 'href', 'tel:08003457788');
   });
 
-  it('check the dyson website link', () => {
+  it('check the company website link', () => {
     const companyWebsiteLink = 'a[action="company-website"]';
     // check the company website link is visible and has the correct text, href, target, and title attributes
     cy.get(companyWebsiteLink)

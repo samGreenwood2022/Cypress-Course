@@ -8,7 +8,7 @@ export class SearchResultsPage extends BasePage {
   // store selectors here as readonly properties so they are defined once
   // ==========================================================================
 
-  readonly dysonTile = '[title="View Dyson"]';
+  readonly tile = '[title="View Dyson"]';
   readonly tabCategory = '[data-cy="tabCategory"]';
 
   // ==========================================================================
@@ -22,8 +22,8 @@ export class SearchResultsPage extends BasePage {
     cy.get(this.tabCategory).contains('Manufacturers').click();
   }
 
-  // click the Dyson result tile
+  // click the result tile
   clickTile() {
-    cy.get(this.dysonTile).click();
+    cy.get(this.tile).click();
   }
 }

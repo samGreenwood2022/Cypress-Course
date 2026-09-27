@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
-// this is a Cypress test suite for navigating to the Dyson Manufacturer Homepage and verifying various elements on the page
+// this is a Cypress test suite for navigating to a Manufacturer Homepage and verifying various elements on the page
 // this is written using the page object model: page objects find elements, the assertions live here in the tests
 
 import { SearchResultsPage } from '../pages/search-results-page';
 import { ManufacturerHomePage } from '../pages/manufacturer-home-page';
 
-describe('Navigate to Dyson Manufacturer Homepage', () => {
+describe('Navigate to Manufacturer Homepage', () => {
   const searchResultsPage = new SearchResultsPage();
   const manufacturerHomePage = new ManufacturerHomePage();
 
@@ -44,7 +44,7 @@ describe('Navigate to Dyson Manufacturer Homepage', () => {
       .and('have.attr', 'href', 'tel:08003457788');
   });
 
-  it('check the dyson website link', () => {
+  it('check the company website link', () => {
     manufacturerHomePage
       .getCompanyWebsiteLink()
       .should('be.visible')
