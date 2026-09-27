@@ -4,8 +4,8 @@
  
 This repository is a hands-on Cypress test automation framework, built step
 by step as part of a 1-to-1 test automation course. It automates a real,
-public website — starting from the NBS Source homepage and navigating
-through to a Dyson Manufacturer page via the search field.
+public website — starting from the site's homepage and navigating
+through to a manufacturer page via the search field.
  
 The goal isn't just to end up with a working test suite, but to build one
 the way a professional automation engineer would: with proper version
