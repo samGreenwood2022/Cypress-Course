@@ -22,6 +22,7 @@ describe('Navigate to Manufacturer Homepage', () => {
     );
   });
 
+  // Test 01 - Verify the h1 header text
   it('the h1 header is correct', () => {
     manufacturerHomePage
       .getH1Header()
@@ -29,6 +30,7 @@ describe('Navigate to Manufacturer Homepage', () => {
       .and('have.text', 'Dyson');
   });
 
+  // Test 02 - Verify the h1 header paragraph text
   it('the h1 header paragraph is correct', () => {
     manufacturerHomePage
       .getH1HeaderParagraph()
@@ -36,6 +38,7 @@ describe('Navigate to Manufacturer Homepage', () => {
       .and('have.text', 'Technology for business');
   });
 
+  // Test 03 - Verify the telephone number
   it('the telephone number is correct', () => {
     manufacturerHomePage
       .getTelephoneNumber()
@@ -44,6 +47,7 @@ describe('Navigate to Manufacturer Homepage', () => {
       .and('have.attr', 'href', 'tel:08003457788');
   });
 
+  // Test 04 - Verify the company website link
   it('check the company website link', () => {
     manufacturerHomePage
       .getCompanyWebsiteLink()
@@ -58,6 +62,7 @@ describe('Navigate to Manufacturer Homepage', () => {
       );
   });
 
+  // Test 05 - Verify the contact manufacturer button
   it('check the contact manufacturer button', () => {
     manufacturerHomePage
       .getContactManufacturerButton()
